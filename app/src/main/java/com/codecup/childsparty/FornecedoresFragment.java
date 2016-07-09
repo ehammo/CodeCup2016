@@ -12,7 +12,7 @@ public class FornecedoresFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         // Inflate the layout for this FornecedoresFragment
-        View view =  inflater.inflate(R.layout.content_main,
+        View view =  inflater.inflate(R.layout.fornecedores,
                 container, false);
         return view;
     }
