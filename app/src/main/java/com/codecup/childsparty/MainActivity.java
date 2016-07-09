@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_organize) {
-            Intent i = new Intent();
+
         } else if (id == R.id.nav_products) {
 
         } else if (id == R.id.nav_suppliers) {
