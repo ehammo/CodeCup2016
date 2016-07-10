@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -48,7 +47,7 @@ public class CarrinhoAdapter extends BaseAdapter{
         TextView txtTitle = (TextView) rowView.findViewById(R.id.carrinho_item_name);
         TextView preco = (TextView) rowView.findViewById(R.id.carrinho_item_preco);
 
-        Button deleteBtn = (Button)rowView.findViewById(R.id.delete_btn);
+        ImageView deleteBtn = (ImageView)rowView.findViewById(R.id.delete_btn);
         deleteBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
