@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@drawable/ic_menu_gallery" />
+        android:src="@drawable/relogio_fazer_orcamento" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,21 +22,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textAlignment="center"
         android:text="Para montar a sua festa precisamos de algumas informações.
     Responda as perguntas a seguir para darmos no final o orçamento do serviço!"
+        android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <View
-        android:layout_height="1dp"
         android:layout_width="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="1dp"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:background="@android:color/background_dark">
-
-    </View>
+        android:layout_marginTop="20dp"
+        android:background="@android:color/background_dark"></View>
 
 
     <EditText
@@ -45,9 +43,19 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:hint="Qual a idade do aniversariante?"
         android:ems="10"
+        android:hint="Qual a idade do aniversariante?"
         android:inputType="number" />
+
+    <EditText
+        android:id="@+id/data_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:hint="Qual o dia e hora do aniversário?"
+        android:inputType="date" />
 
     <TextView
         android:id="@+id/textView3"
@@ -58,21 +66,29 @@
         android:text="Sexo"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <RadioButton
-        android:id="@+id/masculino_radioButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:checked="false"
-        android:text="Masculino" />
+        android:orientation="horizontal">
 
-    <RadioButton
-        android:id="@+id/feminino_radioButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:checked="false"
-        android:text="Feminino" />
+        <RadioButton
+            android:id="@+id/masculino_radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="80dp"
+            android:checked="false"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/feminino_radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Feminino" />
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -87,20 +103,20 @@
     </LinearLayout>
 
     <EditText
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:ems="10"
         android:hint="Quantos convidados?"
-        android:ems="10"
-        android:id="@+id/editText" />
+        android:inputType="number" />
 
     <EditText
+        android:id="@+id/orc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="Qual o orçamento?"
         android:ems="10"
-        android:id="@+id/orc" />
+        android:hint="Qual o orçamento?"
+        android:inputType="number" />
 
     <Button
         android:id="@+id/bt_prox"

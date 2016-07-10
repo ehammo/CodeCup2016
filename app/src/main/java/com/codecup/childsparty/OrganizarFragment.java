@@ -5,9 +5,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -35,7 +32,11 @@ public class OrganizarFragment extends Fragment{
                 LocalFragment f =  new LocalFragment();
                 Bundle bundle = new Bundle();
 
-                if(!(((EditText)view2.findViewById(R.id.orc)).getText().toString().equals(""))) {
+                EditText editText = (EditText)view2.findViewById(R.id.orc);
+
+                if( editText.getText().toString().equals("") ) {
+                    Toast.makeText(getActivity(),"erro",Toast.LENGTH_SHORT).show();
+                }else{
                     Log.e("orc",((EditText) view2.findViewById(R.id.orc)).getText().toString());
                     orcamento = Float.valueOf(((EditText) view2.findViewById(R.id.orc)).getText().toString());
                     bundle.putFloat("orcamento",orcamento);
@@ -43,8 +44,6 @@ public class OrganizarFragment extends Fragment{
                     ft.replace(R.id.fragment,f);
                     ft.addToBackStack(null);
                     ft.commit();
-                }else{
-                    Toast.makeText(getActivity(),"erro",Toast.LENGTH_SHORT).show();
                 }
 
             }
