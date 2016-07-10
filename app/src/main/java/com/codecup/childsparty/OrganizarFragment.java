@@ -17,6 +17,7 @@ public class OrganizarFragment extends Fragment{
         // Inflate the layout for this FornecedoresFragment
         View view =  inflater.inflate(R.layout.organize,
                 container, false);
+        getActivity().setTitle("Organize sua festa");
         return view;
     }
 

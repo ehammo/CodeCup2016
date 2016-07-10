@@ -13,10 +13,10 @@ import android.widget.Toast;
 
 public class FornecedoresFragment extends Fragment {
     String[] web = {
-            "Google Plus",
-            "Twitter",
-            "Windows",
-            "Bing",
+            "Tamarindu",
+            "Comercial Estrela",
+            "Delikata",
+            "Deli Doces",
             "Itunes",
             "Wordpress",
             "Drupal",
@@ -36,10 +36,10 @@ public class FornecedoresFragment extends Fragment {
             "Drupal"
     } ;
     Integer[] imageId = {
-            R.drawable.ic_menu_camera,
-            R.drawable.ic_menu_gallery,
-            R.drawable.ic_menu_manage,
-            R.drawable.ic_menu_send,
+            R.drawable.tamarindu,
+            R.drawable.estrela,
+            R.drawable.delikata,
+            R.drawable.delidoce,
             R.drawable.ic_menu_share,
             R.drawable.ic_menu_slideshow,
             R.drawable.ic_menu_camera,
@@ -69,6 +69,7 @@ public class FornecedoresFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fornecedores,
                 container, false);
 
+        getActivity().setTitle("Fornecedores");
         FornecedorAdapter adapter = new FornecedorAdapter(getActivity(), web, imageId);
         list=(ListView)view.findViewById(R.id.listView1);
         list.setAdapter(adapter);

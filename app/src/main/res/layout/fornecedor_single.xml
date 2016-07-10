@@ -9,13 +9,16 @@
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="50dp"
-        android:layout_height="50dp"/>
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
 
     <TextView
         android:id="@+id/txt"
+        android:layout_toRightOf="@id/img"
+        android:layout_margin = "20dp"
         android:layout_width="wrap_content"
-        android:layout_height="50dp" />
+        android:layout_height="wrap_content"
+        android:textSize="30sp"/>
 </LinearLayout>
 
 </RelativeLayout>

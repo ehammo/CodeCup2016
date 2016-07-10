@@ -72,6 +72,7 @@ public class FornecedorFragment extends Fragment {
       View view =  inflater.inflate(R.layout.fornecedor_description,
                 container, false);
 
+        getActivity().setTitle("Detalhes do Fornecedor");
         ProdutoAdapter adapter = new ProdutoAdapter(getActivity(), web, imageId);
         list=(ListView)view.findViewById(R.id.listViewProdutos);
         list.setAdapter(adapter);
