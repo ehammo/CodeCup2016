@@ -94,7 +94,16 @@
         android:ems="10"
         android:id="@+id/editText" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Qual o orçamento?"
+        android:ems="10"
+        android:id="@+id/orc" />
+
     <Button
+        android:id="@+id/bt_prox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
