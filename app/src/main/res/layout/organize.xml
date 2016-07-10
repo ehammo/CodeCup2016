@@ -43,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="Qual o dia da comemoração?"
         android:inputType="date" />
@@ -53,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="Qual a hora da comemoração?"
         android:inputType="time" />
@@ -63,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="Quantos convidados?"
         android:inputType="number" />
@@ -73,6 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="Qual o orçamento?"
         android:inputType="number" />
