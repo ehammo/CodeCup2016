@@ -2,9 +2,11 @@ package com.codecup.childsparty;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -34,6 +36,17 @@ public class CarrinhoFragment extends Fragment {
         CarrinhoAdapter adapter = new CarrinhoAdapter(getActivity(), nomes, precos,qtd);
         list=(ListView) view.findViewById(R.id.carrinho_listView);
         list.setAdapter(adapter);
+        Button add = (Button)view.findViewById(R.id.bt_add);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                FornecedorGridFragment f =  new FornecedorGridFragment();
+                ft.replace(R.id.fragment,f);
+                ft.addToBackStack(null);
+                ft.commit();
+            }
+        });
 //        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //
 //            @Override
