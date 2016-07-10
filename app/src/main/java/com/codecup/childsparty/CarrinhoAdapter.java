@@ -17,12 +17,12 @@ import java.util.ArrayList;
 public class CarrinhoAdapter extends BaseAdapter{
     private Activity context;
     private ArrayList<String> names;
-    private ArrayList<Integer> imgs;
+    private ArrayList<String> prices;
 
-    public CarrinhoAdapter(Activity context, ArrayList<String> names, ArrayList<Integer> imgs) {
+    public CarrinhoAdapter(Activity context, ArrayList<String> names, ArrayList<String> prices) {
         this.context = context;
         this.names = names;
-        this.imgs = imgs;
+        this.prices = prices;
     }
 
     @Override
@@ -54,14 +54,13 @@ public class CarrinhoAdapter extends BaseAdapter{
             public void onClick(View v) {
                 //do something
                 names.remove(position); //or some other task
-                imgs.remove(position);
+                prices.remove(position);
                 notifyDataSetChanged();
             }
         });
 
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.img);
         txtTitle.setText(names.get(position));
-        preco.setText(imgs.get(position));
+        preco.setText(prices.get(position));
 
         return rowView;
     }
