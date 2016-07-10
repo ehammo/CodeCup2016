@@ -77,8 +77,6 @@ public class FornecedoresFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-
-
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 FornecedorFragment f =  new FornecedorFragment();
                 Bundle bundle = new Bundle();
@@ -88,7 +86,6 @@ public class FornecedoresFragment extends Fragment {
                 ft.replace(R.id.fragment,f);
                 ft.addToBackStack(null);
                 ft.commit();
-
             }
         });
 

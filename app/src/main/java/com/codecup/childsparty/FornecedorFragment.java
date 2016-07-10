@@ -3,6 +3,7 @@ package com.codecup.childsparty;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,13 +72,10 @@ public class FornecedorFragment extends Fragment {
       View view =  inflater.inflate(R.layout.fornecedor_description,
                 container, false);
 
-        int img = (int)getArguments().get("img");
-        String name = (String)getArguments().get("name");
-        ((ImageView)view.findViewById(R.id.fornecedorImg)).setImageResource(img);
-        ((TextView)view.findViewById(R.id.name)).setText(name);
         ProdutoAdapter adapter = new ProdutoAdapter(getActivity(), web, imageId);
         list=(ListView)view.findViewById(R.id.listViewProdutos);
         list.setAdapter(adapter);
+        Log.e("ListaEstado",list.getAdapter().getItem(0).toString());
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -87,7 +85,11 @@ public class FornecedorFragment extends Fragment {
 
             }
         });
-
+        int img = (int)getArguments().get("img");
+        String name = (String)getArguments().get("name");
+        ((ImageView)view.findViewById(R.id.fornecedorImg)).setImageResource(img);
+        ((TextView)view.findViewById(R.id.name)).setText(name);
+        
         return view;
     }
 

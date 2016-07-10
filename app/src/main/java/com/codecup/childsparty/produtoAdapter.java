@@ -1,5 +1,6 @@
 package com.codecup.childsparty;
 import android.app.Activity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,7 @@ private final Activity context;
 private final String[] web;
 private final Integer[] imageId;
 public ProdutoAdapter(Activity context, String[] web, Integer[] imageId) {
-        super(context, R.layout.fornecedor_single, web);
+        super(context, R.layout.produto_single, web);
         this.context = context;
         this.web = web;
         this.imageId = imageId;
@@ -24,13 +25,16 @@ public ProdutoAdapter(Activity context, String[] web, Integer[] imageId) {
 @Override
 public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-        View rowView= inflater.inflate(R.layout.fornecedor_single, null, true);
-        TextView txtTitle = (TextView) rowView.findViewById(R.id.txt);
+        view= inflater.inflate(R.layout.produto_single, null, true);
+        TextView txtTitle = (TextView) view.findViewById(R.id.txt);
 
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.img);
+        ImageView imageView = (ImageView) view.findViewById(R.id.img);
         txtTitle.setText(web[position]);
 
         imageView.setImageResource(imageId[position]);
-        return rowView;
+
+        Log.e("txt da view", web[position]);
+
+        return view;
         }
 }

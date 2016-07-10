@@ -1,5 +1,6 @@
 package com.codecup.childsparty;
 import android.app.Activity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,8 @@ public class FornecedorAdapter extends ArrayAdapter<String>{
         txtTitle.setText(web[position]);
 
         imageView.setImageResource(imageId[position]);
+        Log.e("txt da view_for", web[position]);
+
         return rowView;
     }
 }
