@@ -35,7 +35,7 @@ public class OrganizarFragment extends Fragment{
                 LocalFragment f =  new LocalFragment();
                 Bundle bundle = new Bundle();
 
-                if(((EditText)view2.findViewById(R.id.orc)).getText().toString().equals("")) {
+                if(!(((EditText)view2.findViewById(R.id.orc)).getText().toString().equals(""))) {
                     Log.e("orc",((EditText) view2.findViewById(R.id.orc)).getText().toString());
                     orcamento = Float.valueOf(((EditText) view2.findViewById(R.id.orc)).getText().toString());
                     bundle.putFloat("orcamento",orcamento);
@@ -44,7 +44,7 @@ public class OrganizarFragment extends Fragment{
                     ft.addToBackStack(null);
                     ft.commit();
                 }else{
-                    Toast.makeText(getActivity(),"erro",Toast.LENGTH_SHORT);
+                    Toast.makeText(getActivity(),"erro",Toast.LENGTH_SHORT).show();
                 }
 
             }

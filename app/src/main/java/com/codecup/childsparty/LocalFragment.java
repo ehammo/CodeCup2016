@@ -45,10 +45,38 @@ public class LocalFragment extends Fragment{
             "Brinquedos diversos"
     };
 
-    Integer[] fotos1000 = {};
-    Integer[] fotos3000 = {};
-    Integer[] fotos5000 = {};
-    Integer[] fotos10000 = {};
+    Integer[] fotos1000 = {
+            R.drawable.ic_menu_camera,
+            R.drawable.ic_menu_gallery,
+            R.drawable.ic_menu_manage,
+            R.drawable.ic_menu_send
+    };
+    Integer[] fotos3000 = {
+            R.drawable.ic_menu_camera,
+            R.drawable.ic_menu_gallery,
+            R.drawable.ic_menu_manage,
+            R.drawable.ic_menu_send
+    };
+    Integer[] fotos5000 = {
+            R.drawable.ic_menu_camera,
+            R.drawable.ic_menu_gallery,
+            R.drawable.ic_menu_manage,
+            R.drawable.ic_menu_send,
+            R.drawable.ic_menu_share,
+            R.drawable.ic_menu_slideshow,
+            R.drawable.ic_menu_camera
+    };
+    Integer[] fotos10000 = {
+            R.drawable.ic_menu_camera,
+            R.drawable.ic_menu_gallery,
+            R.drawable.ic_menu_manage,
+            R.drawable.ic_menu_send,
+            R.drawable.ic_menu_share,
+            R.drawable.ic_menu_slideshow,
+            R.drawable.ic_menu_camera,
+            R.drawable.ic_menu_camera,
+            R.drawable.ic_menu_gallery
+    };
 
     ListView list;
     FornecedorAdapter adapter;
