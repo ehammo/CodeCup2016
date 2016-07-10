@@ -7,10 +7,6 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="Organize sua festa" />
         <item
-            android:id="@+id/nav_products"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Produtos disponíveis" />
-        <item
             android:id="@+id/nav_suppliers"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Fornecedores" />
@@ -26,6 +22,11 @@
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Sobre" />
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Contato" />
+
         </menu>
     </item>
 

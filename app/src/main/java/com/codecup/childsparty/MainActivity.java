@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity
             Fragment organizar = new OrganizarFragment();
             goTo(organizar);
 
-        } else if (id == R.id.nav_products) {
+        } else if (id == R.id.nav_contact) {
 
         } else if (id == R.id.nav_suppliers) {
             Fragment fornecedores = new FornecedoresFragment();
