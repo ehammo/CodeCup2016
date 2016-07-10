@@ -23,7 +23,7 @@ public class CarrinhoFragment extends Fragment {
         View view =  inflater.inflate(R.layout.carrinho,
                 container, false);
         final String[] web = (String[]) getArguments().getCharSequenceArray("produtos");
-        final String[] precosArg = (String[]) getArguments().getCharSequenceArray("fone");
+        final String[] precosArg = (String[]) getArguments().getCharSequenceArray("preco");
         ArrayList<String> nomes = new ArrayList<String>(Arrays.asList(web));
         ArrayList<String> precos = new ArrayList<String>(Arrays.asList(precosArg));
 

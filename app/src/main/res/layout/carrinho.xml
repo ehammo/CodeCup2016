@@ -4,6 +4,44 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/carrinho_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="18dp"
+            android:text="Produto"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/carrinho_item_qtd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="36dp"
+            android:text="Quantidade"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/carrinho_item_preco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="18dp"
+            android:text="Preço"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <ListView
         android:id="@+id/carrinho_listView"
         android:layout_width="wrap_content"
@@ -16,6 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:text="Finalizar compra"/>
+            android:text="Finalizar compra" />
     </LinearLayout>
 
 </LinearLayout>
