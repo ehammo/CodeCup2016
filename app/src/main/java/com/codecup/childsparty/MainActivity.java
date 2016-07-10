@@ -38,10 +38,10 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        Fragment fornecedores = new FornecedoresFragment();
+        Fragment organizar = new OrganizarFragment();
         fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.add(R.id.fragment, fornecedores);
+        ft.add(R.id.fragment, organizar);
         ft.commit();
     }
 
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contact) {
 
         } else if (id == R.id.nav_suppliers) {
-            Fragment fornecedores = new FornecedoresFragment();
+            Fragment fornecedores = new FornecedorGridFragment();
             goTo(fornecedores);
         } else if (id == R.id.nav_share) {
 

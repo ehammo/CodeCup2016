@@ -72,12 +72,11 @@ public class FornecedorFragment extends Fragment {
       View view =  inflater.inflate(R.layout.fornecedor_description,
                 container, false);
 
-        getActivity().setTitle("Detalhes do Fornecedor");
-        ProdutoAdapter adapter = new ProdutoAdapter(getActivity(), web, imageId);
+        getActivity().setTitle("Detalhes do Parceiro");
+        ProdutoAdapter adapter = new ProdutoAdapter(getActivity(), web);
         list=(ListView)view.findViewById(R.id.listViewProdutos);
         list.setAdapter(adapter);
         adapter.notifyDataSetChanged();
-        Log.e("ListaEstado",list.getAdapter().getItem(0).toString());
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -89,8 +88,14 @@ public class FornecedorFragment extends Fragment {
         });
         int img = (int)getArguments().get("img");
         String name = (String)getArguments().get("name");
-        ((ImageView)view.findViewById(R.id.fornecedorImg)).setImageResource(img);
-        ((TextView)view.findViewById(R.id.name)).setText(name);
+        String tag = (String)getArguments().get("tag");
+        String fone = (String)getArguments().get("fone");
+        String end = (String)getArguments().get("end");
+        ((ImageView)view.findViewById(R.id.img)).setImageResource(img);
+        ((TextView)view.findViewById(R.id.txt)).setText(name);
+        ((TextView)view.findViewById(R.id.tag)).setText(tag);
+        ((TextView)view.findViewById(R.id.fone)).setText(fone);
+        ((TextView)view.findViewById(R.id.end)).setText(end);
 
         return view;
     }

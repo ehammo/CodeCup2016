@@ -16,13 +16,11 @@ public class ProdutoAdapter extends ArrayAdapter<String> {
 
     private final Activity context;
     private final String[] web;
-    private final Integer[] imageId;
 
-    public ProdutoAdapter(Activity context, String[] web, Integer[] imageId) {
+    public ProdutoAdapter(Activity context, String[] web) {
         super(context, R.layout.produto_single, web);
         this.context = context;
         this.web = web;
-        this.imageId = imageId;
 
     }
 
@@ -35,7 +33,6 @@ public class ProdutoAdapter extends ArrayAdapter<String> {
         ImageView imageView = (ImageView) view.findViewById(R.id.img);
         txtTitle.setText(web[position]);
 
-        imageView.setImageResource(imageId[position]);
 
         Log.e("txt da view", web[position]);
 

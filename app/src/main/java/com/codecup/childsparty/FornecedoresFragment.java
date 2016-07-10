@@ -12,52 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class FornecedoresFragment extends Fragment {
-    String[] web = {
-            "Tamarindu",
-            "Comercial Estrela",
-            "Delikata",
-            "Deli Doces",
-            "Itunes",
-            "Wordpress",
-            "Drupal",
-            "Google Plus",
-            "Twitter",
-            "Windows",
-            "Bing",
-            "Itunes",
-            "Wordpress",
-            "Drupal",
-            "Google Plus",
-            "Twitter",
-            "Windows",
-            "Bing",
-            "Itunes",
-            "Wordpress",
-            "Drupal"
-    } ;
-    Integer[] imageId = {
-            R.drawable.tamarindu,
-            R.drawable.estrela,
-            R.drawable.delikata,
-            R.drawable.delidoce,
-            R.drawable.ic_menu_share,
-            R.drawable.ic_menu_slideshow,
-            R.drawable.ic_menu_camera,
-            R.drawable.ic_menu_camera,
-            R.drawable.ic_menu_gallery,
-            R.drawable.ic_menu_manage,
-            R.drawable.ic_menu_send,
-            R.drawable.ic_menu_share,
-            R.drawable.ic_menu_slideshow,
-            R.drawable.ic_menu_camera,
-            R.drawable.ic_menu_camera,
-            R.drawable.ic_menu_gallery,
-            R.drawable.ic_menu_manage,
-            R.drawable.ic_menu_send,
-            R.drawable.ic_menu_share,
-            R.drawable.ic_menu_slideshow,
-            R.drawable.ic_menu_camera
-    };
+
     ListView list;
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -68,9 +23,13 @@ public class FornecedoresFragment extends Fragment {
         // Inflate the layout for this FornecedoresFragment
         View view =  inflater.inflate(R.layout.fornecedores,
                 container, false);
-
-        getActivity().setTitle("Fornecedores");
-        FornecedorAdapter adapter = new FornecedorAdapter(getActivity(), web, imageId);
+        final String[] web = (String[]) getArguments().getCharSequenceArray("web");
+        final int[] imageId = (int[]) getArguments().getIntArray("imageId");
+        final String[] fone = (String[]) getArguments().getCharSequenceArray("fone");
+        final String[] end = (String[]) getArguments().getCharSequenceArray("end");
+        final String[] tag = (String[]) getArguments().getCharSequenceArray("tag");
+        getActivity().setTitle("Parceiros");
+        FornecedorAdapter adapter = new FornecedorAdapter(getActivity(), web, imageId,end,fone,tag);
         list=(ListView)view.findViewById(R.id.listView1);
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -83,6 +42,9 @@ public class FornecedoresFragment extends Fragment {
                 Bundle bundle = new Bundle();
                 bundle.putString("name", web[position]);
                 bundle.putInt("img", imageId[position]);
+                bundle.putString("end", end[position]);
+                bundle.putString("fone", fone[position]);
+                bundle.putString("tag", tag[position]);
                 f.setArguments(bundle);
                 ft.replace(R.id.fragment,f);
                 ft.addToBackStack(null);

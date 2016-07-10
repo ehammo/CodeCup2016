@@ -45,19 +45,19 @@ public class LocalFragment extends Fragment{
             "Brinquedos diversos"
     };
 
-    Integer[] fotos1000 = {
+    int[] fotos1000 = {
             R.drawable.ic_menu_camera,
             R.drawable.ic_menu_gallery,
             R.drawable.ic_menu_manage,
             R.drawable.ic_menu_send
     };
-    Integer[] fotos3000 = {
+    int[] fotos3000 = {
             R.drawable.ic_menu_camera,
             R.drawable.ic_menu_gallery,
             R.drawable.ic_menu_manage,
             R.drawable.ic_menu_send
     };
-    Integer[] fotos5000 = {
+    int[] fotos5000 = {
             R.drawable.ic_menu_camera,
             R.drawable.ic_menu_gallery,
             R.drawable.ic_menu_manage,
@@ -66,7 +66,7 @@ public class LocalFragment extends Fragment{
             R.drawable.ic_menu_slideshow,
             R.drawable.ic_menu_camera
     };
-    Integer[] fotos10000 = {
+    int[] fotos10000 = {
             R.drawable.ic_menu_camera,
             R.drawable.ic_menu_gallery,
             R.drawable.ic_menu_manage,
@@ -77,6 +77,10 @@ public class LocalFragment extends Fragment{
             R.drawable.ic_menu_camera,
             R.drawable.ic_menu_gallery
     };
+
+
+
+
 
     ListView list;
     FornecedorAdapter adapter;
@@ -93,13 +97,13 @@ public class LocalFragment extends Fragment{
 
         //data para o Adapter diferente para cada um dos orçamentos
         if (orcamento<1000){
-            adapter = new FornecedorAdapter(getActivity(), web1000, fotos1000);
+  //          adapter = new FornecedorAdapter(getActivity(), web1000, fotos1000);
         }else if(orcamento>=1000&&orcamento<3000){
-            adapter = new FornecedorAdapter(getActivity(), web3000, fotos3000);
+    //        adapter = new FornecedorAdapter(getActivity(), web3000, fotos3000);
         }else if(orcamento>=3000&&orcamento<5000){
-            adapter = new FornecedorAdapter(getActivity(), web5000, fotos5000);
+      //      adapter = new FornecedorAdapter(getActivity(), web5000, fotos5000);
         }else{
-            adapter = new FornecedorAdapter(getActivity(), web10000, fotos10000);
+        //    adapter = new FornecedorAdapter(getActivity(), web10000, fotos10000);
         }
         list.setAdapter(adapter);
         Button b = (Button)view.findViewById(R.id.bt_prox);
