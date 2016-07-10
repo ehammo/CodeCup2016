@@ -15,6 +15,9 @@ import java.util.Arrays;
 public class CarrinhoFragment extends Fragment {
 
     ListView list;
+    public  ArrayList<String> nomes;
+    public  ArrayList<String> precos;
+    public  ArrayList<String> qtdA;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -27,13 +30,13 @@ public class CarrinhoFragment extends Fragment {
         final String[] web = (String[]) getArguments().getCharSequenceArray("produtos");
         final String[] precosArg = (String[]) getArguments().getCharSequenceArray("precos");
         final String[] qtdArg = (String[]) getArguments().getCharSequenceArray("qtd");
-        ArrayList<String> nomes = new ArrayList<String>(Arrays.asList(web));
-        ArrayList<String> precos = new ArrayList<String>(Arrays.asList(precosArg));
-        ArrayList<String> qtd = new ArrayList<String>(Arrays.asList(qtdArg));
+        nomes = new ArrayList<String>(Arrays.asList(web));
+        precos = new ArrayList<String>(Arrays.asList(precosArg));
+        qtdA = new ArrayList<String>(Arrays.asList(qtdArg));
 
         getActivity().setTitle("Carrinho");
 
-        CarrinhoAdapter adapter = new CarrinhoAdapter(getActivity(), nomes, precos,qtd);
+        CarrinhoAdapter adapter = new CarrinhoAdapter(getActivity());
         list=(ListView) view.findViewById(R.id.carrinho_listView);
         list.setAdapter(adapter);
         Button add = (Button)view.findViewById(R.id.bt_add);
@@ -74,4 +77,7 @@ public class CarrinhoFragment extends Fragment {
 
 
     }
+
+
+
 }

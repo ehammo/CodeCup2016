@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class OrganizarFragment extends Fragment{
     Float orcamento;
     View view2;
@@ -52,6 +55,9 @@ public class OrganizarFragment extends Fragment{
                 bundle.putCharSequenceArray("produtos",produtos);
                 bundle.putCharSequenceArray("precos",precos);
                 bundle.putCharSequenceArray("qtd",qtd);
+                Carrinho.names = new ArrayList<String>(Arrays.asList(produtos));
+                Carrinho.prices = new ArrayList<String>(Arrays.asList(precos));
+                Carrinho.qtdA = new ArrayList<String>(Arrays.asList(qtd));
                 EditText editText = (EditText)view2.findViewById(R.id.orc);
 
                 if( editText.getText().toString().equals("") ) {
