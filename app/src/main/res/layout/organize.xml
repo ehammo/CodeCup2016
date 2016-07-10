@@ -5,9 +5,10 @@
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
         android:layout_gravity="center"
+        android:scaleType="centerInside"
         android:src="@drawable/relogio_fazer_orcamento" />
 
     <TextView
@@ -34,7 +35,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="20dp"
-        android:background="@android:color/background_dark"></View>
+        android:background="@android:color/background_dark"/>
 
 
     <EditText
