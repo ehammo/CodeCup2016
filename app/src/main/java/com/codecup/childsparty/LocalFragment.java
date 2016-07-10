@@ -10,12 +10,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 public class LocalFragment extends Fragment{
-    String[] web1000 = {
-            "Bolo comum",
-            "Bolas de encher",
-            "Tema para decoração, lembrancinhas e convites",
-            "Salgados e doces"
-    };
+
     String[] web3000 = {
             "Bolo decorativo",
             "Tema para decoração, lembrancinhas e convites personalizadas",

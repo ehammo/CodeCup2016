@@ -14,6 +14,18 @@ import android.widget.Toast;
 public class OrganizarFragment extends Fragment{
     Float orcamento;
     View view2;
+    String[] produtos = {
+            "Bolo comum",
+            "Bolas de encher",
+            "Recreador",
+            "Salgados e doces"
+    };
+    String[] precos = {
+            "R$100,00",
+            "R$10,00",
+            "R$300,00",
+            "R$100,00"
+    };
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -29,9 +41,10 @@ public class OrganizarFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
-                LocalFragment f =  new LocalFragment();
+                CarrinhoFragment f =  new CarrinhoFragment();
                 Bundle bundle = new Bundle();
-
+                bundle.putCharSequenceArray("produtos",produtos);
+                bundle.putCharSequenceArray("precos",precos);
                 EditText editText = (EditText)view2.findViewById(R.id.orc);
 
                 if( editText.getText().toString().equals("") ) {
