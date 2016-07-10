@@ -17,11 +17,13 @@ public class CarrinhoAdapter extends BaseAdapter{
     private Activity context;
     private ArrayList<String> names;
     private ArrayList<String> prices;
+    private ArrayList<String> qtdA;
 
-    public CarrinhoAdapter(Activity context, ArrayList<String> names, ArrayList<String> prices) {
+    public CarrinhoAdapter(Activity context, ArrayList<String> names, ArrayList<String> prices, ArrayList<String> qtd) {
         this.context = context;
         this.names = names;
         this.prices = prices;
+        this.qtdA = qtd;
     }
 
     @Override
@@ -46,6 +48,8 @@ public class CarrinhoAdapter extends BaseAdapter{
         View rowView= inflater.inflate(R.layout.item_carrinho, null, true);
         TextView txtTitle = (TextView) rowView.findViewById(R.id.carrinho_item_name);
         TextView preco = (TextView) rowView.findViewById(R.id.carrinho_item_preco);
+        TextView qtd = (TextView) rowView.findViewById(R.id.carrinho_item_qtd);
+
 
         ImageView deleteBtn = (ImageView)rowView.findViewById(R.id.delete_btn);
         deleteBtn.setOnClickListener(new View.OnClickListener(){
@@ -54,13 +58,14 @@ public class CarrinhoAdapter extends BaseAdapter{
                 //do something
                 names.remove(position); //or some other task
                 prices.remove(position);
+                qtdA.remove(position);
                 notifyDataSetChanged();
             }
         });
 
         txtTitle.setText(names.get(position));
         preco.setText(prices.get(position));
-
+        qtd.setText(qtdA.get(position));
         return rowView;
     }
 }

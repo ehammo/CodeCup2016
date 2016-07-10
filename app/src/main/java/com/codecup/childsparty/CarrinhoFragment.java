@@ -24,12 +24,14 @@ public class CarrinhoFragment extends Fragment {
                 container, false);
         final String[] web = (String[]) getArguments().getCharSequenceArray("produtos");
         final String[] precosArg = (String[]) getArguments().getCharSequenceArray("precos");
+        final String[] qtdArg = (String[]) getArguments().getCharSequenceArray("qtd");
         ArrayList<String> nomes = new ArrayList<String>(Arrays.asList(web));
         ArrayList<String> precos = new ArrayList<String>(Arrays.asList(precosArg));
+        ArrayList<String> qtd = new ArrayList<String>(Arrays.asList(qtdArg));
 
         getActivity().setTitle("Carrinho");
 
-        CarrinhoAdapter adapter = new CarrinhoAdapter(getActivity(), nomes, precos);
+        CarrinhoAdapter adapter = new CarrinhoAdapter(getActivity(), nomes, precos,qtd);
         list=(ListView) view.findViewById(R.id.carrinho_listView);
         list.setAdapter(adapter);
 //        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
