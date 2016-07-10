@@ -154,12 +154,11 @@
             android:text="Crianças"
             android:id="@+id/textView11" />
 
-        <EditText
+        <NumberPicker
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editText6" />
+            android:layout_height="29dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/numberPicker" />
 
     </LinearLayout>
 
