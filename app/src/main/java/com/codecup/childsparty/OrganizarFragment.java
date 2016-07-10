@@ -19,4 +19,7 @@ public class OrganizarFragment extends Fragment{
                 container, false);
         return view;
     }
+
+    public OrganizarFragment(){}
+
 }

@@ -1,6 +1,8 @@
 package com.codecup.childsparty;
 
-import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,6 +18,8 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    FragmentManager fm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +45,22 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        Fragment fornecedores = new FornecedoresFragment();
+        fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.fragment, fornecedores);
+        ft.commit();
     }
+
+    public void goTo(Fragment fragment){
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.fragment, fragment);
+        ft.addToBackStack(null);
+        ft.commit();
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -82,11 +101,14 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_organize) {
+            Fragment organizar = new OrganizarFragment();
+            goTo(organizar);
 
         } else if (id == R.id.nav_products) {
 
         } else if (id == R.id.nav_suppliers) {
-
+            Fragment fornecedores = new FornecedoresFragment();
+            goTo(fornecedores);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

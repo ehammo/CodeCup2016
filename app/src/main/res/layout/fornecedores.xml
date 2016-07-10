@@ -23,15 +23,7 @@
 
         <TextView android:layout_width="fill_parent"
             android:layout_height="wrap_content" android:padding="10dp"
-            android:text="Selecione as opções para sua festa" android:textSize="20sp" />
-
-
-        <Button
-            android:id="@+id/findSelected"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sugestões" />
-
+            android:text="Principais Fornecedores" android:textSize="20sp" />
 
         <ListView android:id="@+id/listView1" android:layout_width="fill_parent"
             android:layout_height="fill_parent" />
