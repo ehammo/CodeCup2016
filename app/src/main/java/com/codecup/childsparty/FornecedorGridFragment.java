@@ -6,11 +6,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-
-import java.util.ArrayList;
 
 /**
  * Created by eduardo on 10/07/2016.
@@ -69,7 +66,10 @@ public class FornecedorGridFragment extends Fragment {
         ImageView iv2 = (ImageView)view.findViewById(R.id.imageView2);
         ImageView iv3 = (ImageView)view.findViewById(R.id.imageView3);
         ImageView iv4 = (ImageView)view.findViewById(R.id.imageView4);
-        iv1.setImageResource(R.drawable.ic_menu_camera);
+        iv1.setImageResource(R.drawable.alimentacao);
+        iv2.setImageResource(R.drawable.decoracao);
+        iv3.setImageResource(R.drawable.outros);
+        iv4.setImageResource(R.drawable.recreacao);
         iv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
