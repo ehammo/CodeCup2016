@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text="Qual a idade do aniversariante?"
+        android:hint="Qual a idade do aniversariante?"
         android:ems="10"
         android:inputType="number" />
 
@@ -90,7 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:text="Quantos convidados?"
+        android:hint="Quantos convidados?"
         android:ems="10"
         android:id="@+id/editText" />
 
