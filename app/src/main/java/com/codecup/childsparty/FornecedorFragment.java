@@ -75,6 +75,7 @@ public class FornecedorFragment extends Fragment {
         ProdutoAdapter adapter = new ProdutoAdapter(getActivity(), web, imageId);
         list=(ListView)view.findViewById(R.id.listViewProdutos);
         list.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
         Log.e("ListaEstado",list.getAdapter().getItem(0).toString());
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -89,7 +90,7 @@ public class FornecedorFragment extends Fragment {
         String name = (String)getArguments().get("name");
         ((ImageView)view.findViewById(R.id.fornecedorImg)).setImageResource(img);
         ((TextView)view.findViewById(R.id.name)).setText(name);
-        
+
         return view;
     }
 
